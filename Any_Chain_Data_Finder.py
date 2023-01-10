@@ -6,7 +6,14 @@ cg = CoinGeckoAPI()
 CONST_DENOM = "usd"
 CONST_MARKET = True
 
+
+
+
 def main():
+    """
+    This code allows you to provide a month, start and end timestamp, any chain ID, and any keys from coin geckos api.
+    It then takes all this data and combines it into one Dataframe for excel or a SQL server. 
+    """
     month = input("Input month you're reporting on here: ")
     start = input("Input starting Timestamp: ") 
     stop = input("Input ending Timestamp: ") 
@@ -98,7 +105,6 @@ def write(master: pd.DataFrame, d_csv: str, s_eco: str):
     
     master.to_csv(d_csv)
     master.describe().to_csv(s_eco)
-    # I don't understand the metric that you created so I'm gonna stop here.
 
 
 if __name__ == "__main__":
