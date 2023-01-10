@@ -11,8 +11,11 @@ CONST_POOLS = [1, 10, 497, 604, 674, 678, 712, 812]
 main = []
 
 def main():
+    """
+    This code searches for the specified pool numbers in CONST_POOLS adn resturns a datafram
+    """
     
-  format(parsing(data))
+    format(parsing(data))
 
 def parsing(data) -> list:
     
@@ -36,3 +39,6 @@ def format(master: list):
     clean.to_csv(csvname)
     
 main()
+
+if __name__ == "__main__":
+    main()
